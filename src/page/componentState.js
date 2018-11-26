@@ -16,4 +16,5 @@ class Square extends React.Component {
     }
 }
 
-export { Square }
+export { Square };
+// module.exports = { Square };

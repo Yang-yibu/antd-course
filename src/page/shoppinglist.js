@@ -3,7 +3,7 @@ import React from 'react';
 const Picture = (props) => {
 	return (
 		<div>
-			<img src={props.src} width="100" height="100"></img>
+			<img src={props.src} width="100" height="100" />
 			<p>[Picture:props.children]: {props.children}</p>
 			{/* <p>[Picture:pros]: { JSON.stringify(props) }</p> */}
 		</div>
