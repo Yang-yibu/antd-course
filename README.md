@@ -122,3 +122,11 @@ getSnapshotBeforeUpdate() {
 
 }
 ```
+
+### Ant
+
+```jsx
+// Item I 大写 ； 最小的导航选项
+<Menu.Item />
+```
+
