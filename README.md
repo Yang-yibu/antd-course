@@ -50,7 +50,7 @@ class ShoppingList extends React.Component {
 
 一般原生标签小写，自定义组件标签首字母大写
 
-#### 组件
+#### 组件基础
 
 自定义组件必须继承 `React.Component` 基类，必须有一个 `Render` 方法
 
@@ -65,7 +65,12 @@ class ShoppingList extends React.Component {
 组件内部的可使用不同的状态，记录在 `this.state` 对象上
 组件内部，`this.setState({val: 1})` 函数触发更新（调用 setState()后，会自动触发 render() 函数，更新UI）
 
-##### 组件的生命周期
+受控组件 | 非受控组件
+> 这个组件的状态是否可以被外部修改；一个设计得当的组件应该同时支持 “受控” 和 “非受控” 两种形式
+>
+> 当开发者不控制组件时，组件自己管理状态；开发者控制组件属性时，组件由属性控制。
+
+#### 组件的生命周期
 > 组件的运行过程中，存在不同的阶段。React 为这些阶段提供了钩子函数，允许开发者自定义每个阶段自动执行的函数。这些方法统称为生命周期方法 --- lifecycle methods
 
 ```js
