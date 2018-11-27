@@ -7,12 +7,16 @@ export default {
     ],
     routes: [{
         path: '/',
-        component: './HelloWorld',
-    }, {
-        path: '/helloWorld',
-        component: './HelloWorld'
-    }, {
-        path: '/card',
-        component: './Card'
-    }]
+        component: '../layout',
+        routes: [{
+            path: '/',
+            component: './HelloWorld',
+        }, {
+            path: '/helloWorld',
+            component: './HelloWorld'
+        }, {
+            path: '/card',
+            component: './Card'
+        }]
+    }],
 };
