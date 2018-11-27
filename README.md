@@ -128,5 +128,8 @@ getSnapshotBeforeUpdate() {
 ```jsx
 // Item I 大写 ； 最小的导航选项
 <Menu.Item />
+
+// 不加 / 会在当前路由后边一直添加
+<Link to="/dashboard/analysis">分析页</Link><
 ```
 
