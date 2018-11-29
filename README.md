@@ -59,7 +59,8 @@ class ShoppingList extends React.Component {
 
 组件内部，所有参数都放在 `this.props` 属性上。通过 `this.props[key]` 读取 
 
-组件内部不能嵌套 DOM
+组件内部不能嵌套 DOM 
+这个好像是 警告 p 不能作为 p 元素的后代
 > Warning: validateDOMNesting(...): \<p> cannot appear as a descendant of \<p>
 
 组件内部的可使用不同的状态，记录在 `this.state` 对象上
@@ -71,6 +72,9 @@ class ShoppingList extends React.Component {
 > 当开发者不控制组件时，组件自己管理状态；开发者控制组件属性时，组件由属性控制。
 
 #### 组件的生命周期
+[第一个组件 - 生命周期方法](https://www.yuque.com/ant-design/course/fd5af7#生命周期方法)  
+[进阶功能 - 生命周期](https://www.yuque.com/ant-design/course/lifecycle)
+
 > 组件的运行过程中，存在不同的阶段。React 为这些阶段提供了钩子函数，允许开发者自定义每个阶段自动执行的函数。这些方法统称为生命周期方法 --- lifecycle methods
 
 ```js

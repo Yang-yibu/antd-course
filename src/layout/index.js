@@ -7,7 +7,14 @@ const {Header, Footer, Sider, Content} = Layout;
 const SubMenu = Menu.SubMenu;
 
 class BasicLayout extends Component {
-  render() {
+    componentDidMount() {
+        console.log('didMount BasicLayout: 挂载后');
+    }
+    componentWillUnmount() {
+        console.log('willUnmount BasicLayout: 卸载前');
+    }
+
+    render() {
     return (
       <Layout>
         <Sider width={256} style={{minHeight: '100vh', color: 'white'}}>
