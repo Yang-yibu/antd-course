@@ -14,15 +14,21 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onClickAdd: (newCard) => {
-			/*newCard = {punchline: '', setup: ''}*/
+		/*onClickAdd: (newCard) => {
+			/!*newCard = {punchline: '', setup: ''}*!/
 			const action = {
 				type: `${namespace}/addNewCard`,
 				payload: newCard, // 需要传递的消息
 			};
 			dispatch(action);
+		},*/
+
+		onDidMount: () => {
+			dispatch({
+				type: `${namespace}/queryInitCards`,
+			})
 		}
-	}
+	};
 }
 
 /**
@@ -77,6 +83,9 @@ export default class PuzzleCardsPage extends Component {
 		});
 	};*/
 
+	componentDidMount () {
+		this.props.onDidMount();
+	}
 	render() {
 		return (
 			<div>
@@ -93,12 +102,12 @@ export default class PuzzleCardsPage extends Component {
 					})
 				}
 
-				<div>
+				{/*<div>
 					<Button onClick={() => this.props.onClickAdd({
 						setup: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
 						punchline: 'here we use dva'
 					})}>添加卡片</Button>
-				</div>
+				</div>*/}
 			</div>
 		)
 	}
