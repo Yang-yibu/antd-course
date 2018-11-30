@@ -1,8 +1,20 @@
 import React, {Component} from "react";
-import {Card, Button} from "antd";
+import {Card/*, Button*/} from "antd";
+import {connect} from "dva";
 
+// Redux DecTools 可以展示 Dav 中 state 的内容
+const namespace = 'puzzlecards';
+
+const mapStateToProps = (state) => {
+	const cardList = state[namespace];
+	return {
+		cardList,
+	}
+};
+
+@connect(mapStateToProps)
 export default class PuzzleCardsPage extends Component {
-	constructor(props) {
+	/*constructor(props) {
 		super(props);
 		this.state = {
 			cardList: [
@@ -17,14 +29,17 @@ export default class PuzzleCardsPage extends Component {
 				},
 			],
 		}
-	}
+	}*/
 
 	/**
 	 * TODO: 1. addNewCard = () => {} 与 2. addNewCard () {} 区别
 	 * 猜测 1 应该是 ES6 中箭头函数在类中具名的一种写法
 	 * 2 ES6 中 对象中方法的简写
+	 *
+	 * ES7 属性初始化器语法：正确绑定回调函数
+	 * https://react.docschina.org/docs/handling-events.html
 	 */
-	addNewCard = () => {
+	/*addNewCard = () => {
 		this.setState(prevState => {
 			const prevCardList = prevState.cardList;
 			this.counter += 1;
@@ -38,13 +53,13 @@ export default class PuzzleCardsPage extends Component {
 				cardList: prevCardList.concat(card)
 			}
 		});
-	};
+	};*/
 
 	render() {
 		return (
 			<div>
 				{
-					this.state.cardList.map(card => {
+					this.props.cardList.map(card => {
 						return (
 							<Card key={card.id}>
 								<div>Q: {card.setup}</div>
@@ -56,9 +71,9 @@ export default class PuzzleCardsPage extends Component {
 					})
 				}
 
-				<div>
+				{/*<div>
 					<Button onClick={this.addNewCard}>添加卡片</Button>
-				</div>
+				</div>*/}
 			</div>
 		)
 	}
