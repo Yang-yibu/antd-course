@@ -137,3 +137,6 @@ getSnapshotBeforeUpdate() {
 <Link to="/dashboard/analysis">分析页</Link><
 ```
 
+#### Dva 驱动的过程
+![Dva 驱动的过程](https://gw.alipayobjects.com/zos/rmsportal/uhUMfTcXxfskqbreAXth.png)
+
