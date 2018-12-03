@@ -29,4 +29,14 @@ export default {
 			]
 		}]
 	}],
+	proxy: {
+		'/dev': {
+			target: 'https://08ad1pao69.execute-api.us-east-1.amazonaws.com',
+			changeOrigin: true
+		},
+		'/test': {
+			target: 'http://114.116.89.193:8999',
+			changeOrigin: true
+		},
+	}
 };

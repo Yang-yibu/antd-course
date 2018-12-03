@@ -26,8 +26,8 @@ export default {
 	effects: {
 		* queryInitCards(_, sagaEffects) {
 			const {call, put} = sagaEffects;
-			// const endPointURL = 'https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke';
-			const endPointURL = 'http://114.116.89.193:8999/test/cardList';
+			// const endPointURL = '/dev/random_joke';
+			const endPointURL = '/test/cardList';
 
 			const puzzle = yield call(request, endPointURL);
 			yield put({type: 'addNewCard', payload: puzzle});

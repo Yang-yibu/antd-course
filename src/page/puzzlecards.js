@@ -33,7 +33,9 @@ const mapDispatchToProps = (dispatch) => {
 
 /**
  * connect: 连接 dva 和 React 的两个平行世界 https://dvajs.com/guide/fig-show.html#图解二-redux-表示法
- * 	让组件获取到 model 中的数据；驱动 model 改变方法
+ * 作用：
+ * 	1. 让组件获取到 model 中的数据
+ * 	2. 驱动 model 改变方法
  *
  * @ 装饰器语法
  *

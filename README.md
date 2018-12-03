@@ -138,5 +138,10 @@ getSnapshotBeforeUpdate() {
 ```
 
 #### Dva 驱动的过程
-![Dva 驱动的过程](https://gw.alipayobjects.com/zos/rmsportal/uhUMfTcXxfskqbreAXth.png)
+
+静态数据
+![Dva 驱动的过程 图1](https://gw.alipayobjects.com/zos/rmsportal/uhUMfTcXxfskqbreAXth.png)
+
+从服务端请求数据
+![ Dva 服务器取值 图2](https://gw.alipayobjects.com/zos/rmsportal/ZSCxeNAFqHgKXsyjtpxt.png)
 
