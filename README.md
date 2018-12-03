@@ -145,3 +145,5 @@ getSnapshotBeforeUpdate() {
 从服务端请求数据
 ![ Dva 服务器取值 图2](https://gw.alipayobjects.com/zos/rmsportal/ZSCxeNAFqHgKXsyjtpxt.png)
 
+配置代理请求和不配置请求图解
+![](https://gw.alipayobjects.com/zos/rmsportal/YiBKIHevTMjvpIAodsOq.png)
